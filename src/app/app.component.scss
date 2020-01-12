@@ -1,0 +1,17 @@
+@import "~@angular/material/theming";
+$app-success: mat-palette($mat-green, A400, A200, A700);
+$app-danger: mat-palette($mat-red, A400, A200, A700);
+$app-white: #fff;
+$app-colors: mat-palette($app-success, $app-danger, $app-white);
+
+.mat-success {
+  background-color: mat-color($app-success);
+}
+
+.mat-danger {
+  background-color: mat-color($app-danger);
+}
+
+.mat-white {
+  background-color: $app-white;
+}
