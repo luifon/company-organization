@@ -24,6 +24,27 @@ $company-organization-theme: mat-light-theme($app-primary, $app-accent, $app-war
 // that you are using.
 @include angular-material-theme($company-organization-theme);
 
+// creating different mat-classes for color components
+$app-success: mat-palette($mat-green, A400, A200, A700);
+$app-danger: mat-palette($mat-red, A400, A200, A700);
+$app-white: #fff;
+$app-colors: mat-palette($app-success, $app-danger, $app-white);
+
+.mat-success {
+  background-color: mat-color($app-success);
+  color: $app-white
+}
+
+.mat-danger {
+  background-color: mat-color($app-danger);
+  color: $app-white;
+}
+
+.mat-white {
+  background-color: $app-white;
+}
+
+
 /* You can add global styles to this file, and also import other style files */
 
 html,

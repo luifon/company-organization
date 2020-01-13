@@ -3,7 +3,7 @@ import { MatPaginatorIntl } from '@angular/material';
 // arquivo para tradução dos labels do list-admin.component
 
 const brRangeLabel = (page: number, pageSize: number, length: number) => {
-  if (length === 0 || pageSize === 0) { return `0 de ${length}`; }
+  if (length === 0 || pageSize === 0) { return `0 of ${length}`; }
 
   length = Math.max(length, 0);
 
@@ -13,17 +13,17 @@ const brRangeLabel = (page: number, pageSize: number, length: number) => {
       Math.min(startIndex + pageSize, length) :
       startIndex + pageSize;
 
-  return `${startIndex + 1} - ${endIndex} de ${length}`;
+  return `${startIndex + 1} - ${endIndex} of ${length}`;
 };
 
 export function getBrPaginatorIntl() {
   const paginatorIntl = new MatPaginatorIntl();
 
-  paginatorIntl.itemsPerPageLabel = 'Itens por página:';
-  paginatorIntl.firstPageLabel = 'Primeira página';
-  paginatorIntl.previousPageLabel = 'Página anterior';
-  paginatorIntl.nextPageLabel = 'Próxima página';
-  paginatorIntl.lastPageLabel = 'Última página';
+  paginatorIntl.itemsPerPageLabel = 'Items by page:';
+  paginatorIntl.firstPageLabel = 'First page';
+  paginatorIntl.previousPageLabel = 'Previous page';
+  paginatorIntl.nextPageLabel = 'Next page';
+  paginatorIntl.lastPageLabel = 'Last page';
   paginatorIntl.getRangeLabel = brRangeLabel;
 
   return paginatorIntl;
