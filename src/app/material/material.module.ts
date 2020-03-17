@@ -17,7 +17,6 @@ import {
   MatInputModule,
   MatListModule,
   MatMenuModule,
-  MatPaginatorIntl,
   MatPaginatorModule,
   MatProgressSpinnerModule,
   MatSelectModule,
@@ -32,43 +31,43 @@ import {
   MatTooltipModule,
   MAT_DATE_FORMATS,
   MAT_DIALOG_DEFAULT_OPTIONS,
-  MatSlideToggle
 } from '@angular/material';
-import { getBrPaginatorIntl } from './br-paginator';
-import { AppDialogDefaultOptions, MY_DATE_FORMATS } from './material-default-options';
+import {
+  AppDialogDefaultOptions,
+  MY_DATE_FORMATS,
+} from './material-default-options';
 
 const modules = [
-
   FlexLayoutModule,
-  // LayoutModule,
+  LayoutModule,
   MatToolbarModule,
-  // MatButtonModule,
-  // MatSidenavModule,
-  // MatIconModule,
-  // MatListModule,
-  // MatMenuModule,
-  // MatCardModule,
-  // MatDividerModule,
-  // MatSnackBarModule,
-  // MatTableModule,
-  // MatInputModule,
-  // MatFormFieldModule,
-  // MatPaginatorModule,
-  // MatDialogModule,
-  // MatSortModule,
-  // MatSelectModule,
-  // MatAutocompleteModule,
-  // MatChipsModule,
-  // MatDatepickerModule,
-  // // MatMomentDateModule,
-  // MatBadgeModule,
-  // MatCheckboxModule,
-  // MatProgressSpinnerModule,
-  // MatStepperModule,
-  // MatTooltipModule,
-  // ScrollingModule,
-  // MatTabsModule,
-  // MatSlideToggleModule
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
+  MatCardModule,
+  MatDividerModule,
+  MatSnackBarModule,
+  MatTableModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatPaginatorModule,
+  MatDialogModule,
+  MatSortModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  // MatMomentDateModule,
+  MatBadgeModule,
+  MatCheckboxModule,
+  MatProgressSpinnerModule,
+  MatStepperModule,
+  MatTooltipModule,
+  ScrollingModule,
+  MatTabsModule,
+  MatSlideToggleModule,
 ];
 
 @NgModule({
@@ -76,9 +75,8 @@ const modules = [
   imports: [...modules],
   exports: [...modules],
   providers: [
-    { provide: MatPaginatorIntl, useValue: getBrPaginatorIntl() },
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useClass: AppDialogDefaultOptions },
-    { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS }
-  ]
+    { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS },
+  ],
 })
 export class MaterialModule {}
